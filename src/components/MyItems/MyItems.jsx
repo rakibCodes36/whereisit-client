@@ -22,7 +22,7 @@ const MyItems = () => {
       const fetchItems = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:5001/myItems/${user.email}`,
+            `https://whereisit-sigma.vercel.app/myItems/${user.email}`,
             { withCredentials: true }
           );
           setItems(response.data);
@@ -55,7 +55,7 @@ const MyItems = () => {
     if (result.isConfirmed) {
       try {
         const response = await axios.delete(
-          `http://localhost:5001/deleteItem/${itemId}`
+          `https://whereisit-sigma.vercel.app/deleteItem/${itemId}`
         );
 
         if (response.status === 200) {

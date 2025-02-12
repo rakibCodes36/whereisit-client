@@ -27,7 +27,7 @@ const AllRecovered = () => {
     const fetchRecoveredItems = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5001/allRecovered",
+          "https://whereisit-sigma.vercel.app/allRecovered",
           {
             withCredentials: true,
           }

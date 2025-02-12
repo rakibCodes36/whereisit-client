@@ -30,7 +30,7 @@ const ItemDetails = () => {
       const fetchItemDetails = async () => {
         try {
           const response = await axios.get(
-            `http://localhost:5001/items/${id}`,
+            `https://whereisit-sigma.vercel.app/items/${id}`,
             { withCredentials: true }
           );
           setItem(response.data);
@@ -64,7 +64,7 @@ const ItemDetails = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5001/recoverItem",
+        "https://whereisit-sigma.vercel.app/recoverItem",
         recoveryDetails,
         { withCredentials: true }
       );

@@ -29,7 +29,7 @@ const UpdateItem = () => {
     const fetchItem = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5001/items/${id}`,
+          `https://whereisit-sigma.vercel.app/items/${id}`,
           {
             withCredentials: true,
           }
@@ -82,7 +82,7 @@ const UpdateItem = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5001/updateItem/${id}`,
+        `https://whereisit-sigma.vercel.app/updateItem/${id}`,
         formData,
         {
           headers: { "Content-Type": "application/json" },

@@ -11,7 +11,7 @@ const ItemCounts = () => {
   useEffect(() => {
     const fetchCounts = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/itemCounts");
+        const response = await axios.get("https://whereisit-sigma.vercel.app/itemCounts");
         setCounts(response.data);
       } catch (error) {
         console.error("Failed to fetch item counts", error);

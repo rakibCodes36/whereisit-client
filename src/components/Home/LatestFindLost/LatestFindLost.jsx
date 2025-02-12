@@ -17,7 +17,7 @@ const LatestFindLost = () => {
   useEffect(() => {
     const fetchRecentItems = async () => {
       try {
-        const response = await axios.get("http://localhost:5001/recentItems");
+        const response = await axios.get("https://whereisit-sigma.vercel.app/recentItems");
         setItems(response.data);
         setLoading(false);
       } catch (error) {

@@ -14,7 +14,7 @@ const AllItems = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/allItems")
+      .get("https://whereisit-sigma.vercel.app/allItems")
       .then((response) => {
         setItems(response.data);
         setFilteredItems(response.data);

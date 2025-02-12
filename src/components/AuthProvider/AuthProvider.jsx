@@ -84,7 +84,7 @@ const AuthProvider = ({ children }) => {
           email: currentUser.email,
         };
         axios
-          .post("http://localhost:5001/jwt", user, {
+          .post("https://whereisit-sigma.vercel.app/jwt", user, {
             withCredentials: true,
           })
           .then((res) => {
@@ -94,7 +94,7 @@ const AuthProvider = ({ children }) => {
       } else {
         axios
           .post(
-            "http://localhost:5001/logout",
+            "https://whereisit-sigma.vercel.app/logout",
             {},
             { withCredentials: true }
           )
