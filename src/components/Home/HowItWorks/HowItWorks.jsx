@@ -36,7 +36,7 @@ const HowItWorks = () => {
   
 
   return (
-    <section className="py-14 bg-gradient-to-b from-blue-100 via-purple-100 to-pink-100 mb-10">
+    <section className="">
       <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-10">
         How It Works
       </h2>

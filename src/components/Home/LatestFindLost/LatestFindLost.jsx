@@ -29,7 +29,7 @@ const LatestFindLost = () => {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto mb-14 px-4">
+    <div className="max-w-7xl mx-auto mb-16 px-4">
       <h2 className="text-3xl font-bold text-center mb-10 mt-14 text-gray-800">
         Latest Found and Lost Items
       </h2>

@@ -22,7 +22,7 @@ const ItemCounts = () => {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto my-14 px-4">
+    <div className="max-w-7xl mx-auto my-16 px-4">
       <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
         Item Counts
       </h2>
@@ -31,11 +31,11 @@ const ItemCounts = () => {
           <h3 className="text-xl font-bold">Lost Items</h3>
           <p className="text-3xl font-semibold mt-2">{counts.lostCount}</p>
         </div>
-        <div className="bg-gradient-to-r from-green-500 to-teal-500 text-white shadow-lg rounded-lg p-6 text-center">
+        <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg rounded-lg p-6 text-center">
           <h3 className="text-xl font-bold">Found Items</h3>
           <p className="text-3xl font-semibold mt-2">{counts.foundCount}</p>
         </div>
-        <div className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white shadow-lg rounded-lg p-6 text-center">
+        <div className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg rounded-lg p-6 text-center">
           <h3 className="text-xl font-bold">Recovered Items</h3>
           <p className="text-3xl font-semibold mt-2">{counts.recoveredCount}</p>
         </div>

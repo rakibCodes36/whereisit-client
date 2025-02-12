@@ -28,7 +28,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className=" px-8 py-14 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 rounded-lg shadow-xl">
+    <div className=" px-8 mb-16 rounded-lg shadow-xl">
       <div className="max-w-7xl mx-auto">
       <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-10">
         What Our Users Say
@@ -43,7 +43,7 @@ const Testimonials = () => {
               <img
                 src={testimonial.image}
                 alt={testimonial.name}
-                className="w-full h-full rounded-full object-cover border-4 border-indigo-400"
+                className="w-full h-full rounded-full object-cover border-4 border-blue-500"
               />
             </div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-2">
@@ -53,7 +53,7 @@ const Testimonials = () => {
               {testimonial.feedback}
             </p>
             <div className="mt-4">
-              <span className="block w-16 h-1 bg-gradient-to-r from-indigo-500 to-pink-500 rounded-lg"></span>
+              <span className="block w-16 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg"></span>
             </div>
           </div>
         ))}
