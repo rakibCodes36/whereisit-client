@@ -9,7 +9,7 @@ const MainLayout = () => {
     <div>
       <ToastContainer position="top-center" />
       <Navbar></Navbar>
-      <div className="mt-24">
+      <div className="mt-32">
       <Outlet></Outlet></div>
       <Footer></Footer>
     </div>

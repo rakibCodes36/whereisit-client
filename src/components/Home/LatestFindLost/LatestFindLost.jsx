@@ -17,9 +17,7 @@ const LatestFindLost = () => {
   useEffect(() => {
     const fetchRecentItems = async () => {
       try {
-        const response = await axios.get(
-          "http://localhost:5001/recentItems"
-        );
+        const response = await axios.get("http://localhost:5001/recentItems");
         setItems(response.data);
         setLoading(false);
       } catch (error) {
@@ -32,7 +30,7 @@ const LatestFindLost = () => {
 
   return (
     <div className="max-w-7xl mx-auto my-10 px-4">
-      <h2 className="text-3xl font-bold text-center mb-10 mt-14">
+      <h2 className="text-3xl font-bold text-center mb-10 mt-14 text-gray-800">
         Latest Found and Lost Items
       </h2>
 
@@ -48,31 +46,33 @@ const LatestFindLost = () => {
             {items.map((item) => (
               <div
                 key={item._id}
-                className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition duration-300"
+                className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition duration-300"
               >
                 <img
                   src={item.image}
                   alt={item.title}
                   className="h-48 w-full object-cover"
                 />
-                <div className="p-4 ">
+                <div className="p-4">
                   <h3 className="text-2xl font-bold">{item.title}</h3>
                   <p className="text-sm mt-2 flex items-center gap-2">
-                    <FaTags /> <strong className="mr-1">Type:</strong>
+                    <FaTags className="text-white" />{" "}
+                    <strong className="mr-1">Type:</strong>
                     {item.type}
                   </p>
                   <p className="text-sm flex items-center gap-2">
-                    <FaMapMarkerAlt />
+                    <FaMapMarkerAlt className="text-white" />
                     <strong className="mr-1">Location:</strong> {item.location}
                   </p>
                   <p className="text-sm flex items-center gap-2">
-                    <FaCalendarAlt /> <strong className="mr-1">Date:</strong>
+                    <FaCalendarAlt className="text-white" />{" "}
+                    <strong className="mr-1">Date:</strong>
                     {new Date(item.date).toLocaleDateString("en-US")}
                   </p>
                   <div className="mt-6 text-center flex justify-center">
                     <button
                       onClick={() => navigate(`/items/${item._id}`)}
-                      className="px-4 py-2 bg-white text-indigo-600 font-semibold rounded flex items-center justify-center gap-2 hover:bg-gray-100"
+                      className="px-4 py-2 bg-white text-blue-600 font-semibold rounded flex items-center justify-center gap-2 hover:bg-gray-100"
                     >
                       <FaEye /> View Details
                     </button>
@@ -85,7 +85,7 @@ const LatestFindLost = () => {
           <div className="text-center mt-8 flex justify-center">
             <button
               onClick={() => navigate("/all-items")}
-              className="px-6 py-3 bg-gradient-to-r from-green-400 to-blue-500 text-white font-semibold rounded flex items-center justify-center gap-2 hover:from-green-500 hover:to-blue-600 transition duration-300"
+              className="px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded flex items-center justify-center gap-2 hover:from-blue-600 hover:to-cyan-600 transition duration-300"
             >
               <FaListAlt /> See All
             </button>

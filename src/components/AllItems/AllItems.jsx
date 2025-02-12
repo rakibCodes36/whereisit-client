@@ -58,7 +58,7 @@ const AllItems = () => {
       <Helmet>
         <title>All Lost or Found Items | WhereIsIt</title>
       </Helmet>
-      <h1 className="text-3xl font-bold text-center mb-8">
+      <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">
         Lost and Found Items
       </h1>
 
@@ -88,7 +88,7 @@ const AllItems = () => {
                 {currentItems.map((item) => (
                   <div
                     key={item._id}
-                    className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition duration-300"
+                    className="bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg rounded-lg overflow-hidden hover:scale-105 transform transition duration-300"
                   >
                     <img
                       src={item.image}
@@ -98,23 +98,24 @@ const AllItems = () => {
                     <div className="p-4">
                       <h2 className="text-2xl font-bold">{item.title}</h2>
                       <p className="text-sm mt-2 flex items-center gap-2">
-                        <FaTags /> <strong className="mr-1">Type:</strong>
+                        <FaTags className="text-white" />{" "}
+                        <strong className="mr-1">Type:</strong>
                         {item.type}
                       </p>
                       <p className="text-sm flex items-center gap-2">
-                        <FaMapMarkerAlt />
+                        <FaMapMarkerAlt className="text-white" />
                         <strong className="mr-1">Location:</strong>{" "}
                         {item.location}
                       </p>
                       <p className="text-sm flex items-center gap-2">
-                        <FaCalendarAlt />{" "}
+                        <FaCalendarAlt className="text-white" />{" "}
                         <strong className="mr-1">Date:</strong>
                         {new Date(item.date).toLocaleDateString("en-US")}
                       </p>
                       <div className="mt-6 text-center flex justify-center">
                         <Link
                           to={`/items/${item._id}`}
-                          className="px-4 py-2 bg-white text-indigo-600 font-semibold rounded flex items-center justify-center gap-2 hover:bg-gray-100"
+                          className="px-4 py-2 bg-white text-blue-600 font-semibold rounded flex items-center justify-center gap-2 hover:bg-gray-100"
                         >
                           <FaEye /> View Details
                         </Link>

@@ -1,12 +1,12 @@
-import logo from "../../assets/wlogo.png";
+import logo from "../../assets/wlogo-f.png";
 import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="footer footer-center bg-gradient-to-r from-blue-500 to-cyan-500 text-gray-100 p-10 ">
       <aside>
-        <img src={logo} alt="" className="w-16 rounded-xl"/>
-        <h2 className="text-xl font-bold"> WhereIsIt</h2>
+        <img src={logo} alt="" className="w-32 rounded-xl"/>
+        {/* <h2 className="text-xl font-bold"> WhereIsIt</h2> */}
         <p className="font-bold">
          
           
