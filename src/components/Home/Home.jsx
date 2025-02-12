@@ -1,4 +1,5 @@
 import HowItWorks from "./HowItWorks/HowItWorks";
+import ItemCounts from "./ItemCounts/ItemCounts";
 import LatestFindLost from "./LatestFindLost/LatestFindLost";
 import Slider from "./Slider/Slider";
 import Testimonials from "./Testimonials/Testimonials";
@@ -12,6 +13,7 @@ const Home = () => {
       </Helmet>
       <Slider></Slider>
       <LatestFindLost></LatestFindLost>
+      <ItemCounts></ItemCounts>
       <HowItWorks></HowItWorks>
       <Testimonials></Testimonials>
     </div>
