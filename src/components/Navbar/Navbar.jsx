@@ -5,7 +5,7 @@ import { toast } from "react-toastify";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Menu } from "@headlessui/react";
 import { Tooltip } from "react-tooltip";
-import logo from "../../assets/wlogo.png";
+import logo from "../../assets/wlogo-f.png";
 
 const Navbar = () => {
   const { user, handleLogout } = useContext(AuthContext);
@@ -25,14 +25,30 @@ const Navbar = () => {
         <NavLink to="/">Home</NavLink>
       </li>
       <li>
+        <NavLink to="/about">About</NavLink>
+      </li>
+      <li>
         <NavLink to="/all-items">Lost & Found Items Page</NavLink>
       </li>
+      {user && (
+        <>
+          <li>
+            <NavLink to="/add-items">Add Items</NavLink>
+          </li>
+          <li>
+            <NavLink to="/all-recovered">All Recovered</NavLink>
+          </li>
+          <li>
+            <NavLink to="/my-items">My Items</NavLink>
+          </li>
+        </>
+      )}
     </>
   );
 
   return (
-    <div className="bg-gradient-to-r from-blue-500 to-cyan-500">
-      <div className="navbar max-w-7xl mx-auto py-4">
+    <div className="fixed top-0 left-0 w-full bg-gradient-to-r from-blue-500 to-cyan-500 z-50">
+      <div className="navbar max-w-7xl mx-auto py-4 px-4 lg:px-3">
         {/* Navbar Start */}
         <div className="navbar-start">
           <div className="dropdown">
@@ -47,7 +63,7 @@ const Navbar = () => {
             </ul>
           </div>
           <Link to="/">
-            <img src={logo} alt="Logo" className="w-16 rounded-xl" />
+            <img src={logo} alt="Logo" className="w-36 rounded-xl" />
           </Link>
         </div>
 
@@ -82,7 +98,7 @@ const Navbar = () => {
                   <Menu.Item>
                     {({ active }) => (
                       <NavLink
-                        to="/add-items"
+                        to="/profile"
                         className={({ isActive }) =>
                           `${
                             isActive
@@ -93,14 +109,14 @@ const Navbar = () => {
                           } block px-4 py-2 text-sm text-gray-700`
                         }
                       >
-                        Add Items
+                        Profile
                       </NavLink>
                     )}
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
                       <NavLink
-                        to="/all-recovered"
+                        to="/settings"
                         className={({ isActive }) =>
                           `${
                             isActive
@@ -111,25 +127,7 @@ const Navbar = () => {
                           } block px-4 py-2 text-sm text-gray-700`
                         }
                       >
-                        All Recovered
-                      </NavLink>
-                    )}
-                  </Menu.Item>
-                  <Menu.Item>
-                    {({ active }) => (
-                      <NavLink
-                        to="/my-items"
-                        className={({ isActive }) =>
-                          `${
-                            isActive
-                              ? "bg-blue-100 text-blue-700"
-                              : active
-                              ? "bg-gray-100"
-                              : ""
-                          } block px-4 py-2 text-sm text-gray-700`
-                        }
-                      >
-                        My items
+                        Settings
                       </NavLink>
                     )}
                   </Menu.Item>
@@ -147,7 +145,7 @@ const Navbar = () => {
           ) : (
             <NavLink
               to="/login"
-              className="bg-blue-600 text-white py-2 px-4 rounded-md"
+              className="bg-white text-indigo-600 py-2 px-4 rounded-md"
             >
               Login
             </NavLink>

@@ -12,6 +12,7 @@ import MyItems from "./../components/MyItems/MyItems";
 // import UpdateItems from "../components/UpdateItem/UpdateItem";
 import AllRecovered from "../components/AllRecovered/AllRecovered";
 import UpdateItem from "../components/UpdateItem/UpdateItem";
+import About from "../components/About/About";
 
 
 const router = createBrowserRouter([
@@ -80,6 +81,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
       },
     ],
   },
