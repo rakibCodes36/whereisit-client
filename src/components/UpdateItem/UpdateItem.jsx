@@ -266,7 +266,7 @@ const UpdateItem = () => {
 
         <button
           type="submit"
-          className="btn bg-gradient-to-r from-green-400 to-blue-500 text-white w-full text-xl font-bold hover:from-green-500 hover:to-blue-600 transition duration-300"
+          className="btn bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition duration-300"
         >
           Update Post
         </button>

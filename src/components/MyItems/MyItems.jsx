@@ -115,7 +115,7 @@ const MyItems = () => {
                   <td className="border px-4 py-2 text-center">
                     <button
                       onClick={() => handleUpdate(item._id)}
-                      className="btn bg-violet-800 text-white px-3 py-1 mr-2 transition duration-300"
+                      className="btn bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition duration-300  px-3 py-1 mr-2"
                     >
                       Update
                     </button>

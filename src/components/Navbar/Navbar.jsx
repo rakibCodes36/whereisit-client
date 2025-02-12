@@ -30,19 +30,6 @@ const Navbar = () => {
       <li>
         <NavLink to="/all-items">Lost & Found Items Page</NavLink>
       </li>
-      {user && (
-        <>
-          <li>
-            <NavLink to="/add-items">Add Items</NavLink>
-          </li>
-          <li>
-            <NavLink to="/all-recovered">All Recovered</NavLink>
-          </li>
-          <li>
-            <NavLink to="/my-items">My Items</NavLink>
-          </li>
-        </>
-      )}
     </>
   );
 
@@ -88,17 +75,13 @@ const Navbar = () => {
                     data-tooltip-id="user-tooltip"
                     data-tooltip-content={user.displayName}
                   />
-                  <Tooltip
-                    id="user-tooltip"
-                    place="top"
-                    style={{ zIndex: 10 }}
-                  />
+                  <Tooltip id="user-tooltip" place="top" style={{ zIndex: 10 }} />
                 </Menu.Button>
                 <Menu.Items className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none z-50">
                   <Menu.Item>
                     {({ active }) => (
                       <NavLink
-                        to="/profile"
+                        to="/add-items"
                         className={({ isActive }) =>
                           `${
                             isActive
@@ -109,14 +92,14 @@ const Navbar = () => {
                           } block px-4 py-2 text-sm text-gray-700`
                         }
                       >
-                        Profile
+                        Add Items
                       </NavLink>
                     )}
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
                       <NavLink
-                        to="/settings"
+                        to="/all-recovered"
                         className={({ isActive }) =>
                           `${
                             isActive
@@ -127,7 +110,25 @@ const Navbar = () => {
                           } block px-4 py-2 text-sm text-gray-700`
                         }
                       >
-                        Settings
+                        All Recovered
+                      </NavLink>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <NavLink
+                        to="/my-items"
+                        className={({ isActive }) =>
+                          `${
+                            isActive
+                              ? "bg-blue-100 text-blue-700"
+                              : active
+                              ? "bg-gray-100"
+                              : ""
+                          } block px-4 py-2 text-sm text-gray-700`
+                        }
+                      >
+                        My Items
                       </NavLink>
                     )}
                   </Menu.Item>
@@ -135,18 +136,12 @@ const Navbar = () => {
               </Menu>
 
               {/* Logout Button */}
-              <button
-                onClick={handleLogoutClick}
-                className="btn btn-error btn-sm"
-              >
+              <button onClick={handleLogoutClick} className="btn btn-error btn-sm">
                 Logout
               </button>
             </>
           ) : (
-            <NavLink
-              to="/login"
-              className="bg-white text-indigo-600 py-2 px-4 rounded-md"
-            >
+            <NavLink to="/login" className="bg-white text-indigo-600 py-2 px-4 rounded-md">
               Login
             </NavLink>
           )}
