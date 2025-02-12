@@ -82,7 +82,7 @@ const Slider = () => {
                   className="w-full h-full object-cover rounded-lg"
                 />
                 <motion.div
-                  className="absolute max-w-[70%] left-5 bottom-8 text-white bg-black bg-opacity-50 p-4 rounded-lg"
+                  className="absolute max-w-[70%] left-5 bottom-8 text-white bg-blue-500  bg-opacity-50 p-4 rounded-lg"
                   variants={textVariants}
                   initial="initial"
                   animate="animate"

@@ -110,7 +110,7 @@ const Login = () => {
             {error && <p className="text-red-500 text-sm mt-1">{error}</p>}
             <button
               type="submit"
-              className="btn bg-gradient-to-r from-green-400 to-blue-500 text-white w-full text-xl font-bold hover:from-green-500 hover:to-blue-600 transition duration-300 mt-4"
+              className="btn bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition duration-300 w-full mt-4"
             >
               Login
             </button>
@@ -126,7 +126,7 @@ const Login = () => {
         <div className="divider my-4">OR</div>
         <button
           onClick={handleGoogleSignIn}
-          className="btn btn-outline  w-full flex items-center justify-center text-blue-500"
+          className="btn btn-outline  w-full flex items-center justify-center text-blue-500 hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 hover:text-white transition duration-300"
         >
           <FcGoogle size={20} />
           Sign in with Google

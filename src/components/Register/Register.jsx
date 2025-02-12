@@ -138,7 +138,7 @@ const Register = () => {
         </div>
         {error && <p className="text-red-500">{error}</p>}
 
-        <button type="submit" className="btn bg-gradient-to-r from-green-400 to-blue-500 text-white w-full text-xl font-bold hover:from-green-500 hover:to-blue-600 transition duration-300">
+        <button type="submit" className="btn bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition duration-300 w-full mt-4">
           Register
         </button>
       </form>
@@ -154,7 +154,7 @@ const Register = () => {
 
       <button
         onClick={handleGoogleSignIn}
-        className="btn btn-outline text-blue-500 w-full flex items-center justify-center"
+        className="btn btn-outline  w-full flex items-center justify-center text-blue-500 hover:bg-gradient-to-r hover:from-blue-500 hover:to-cyan-500 hover:text-white transition duration-300"
       >
         <FcGoogle size={20} />
         Sign up with Google

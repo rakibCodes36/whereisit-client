@@ -136,7 +136,7 @@ const Navbar = () => {
               </Menu>
 
               {/* Logout Button */}
-              <button onClick={handleLogoutClick} className="btn btn-error btn-sm">
+              <button onClick={handleLogoutClick} className="bg-white text-indigo-600 py-2 px-4 rounded-md">
                 Logout
               </button>
             </>
