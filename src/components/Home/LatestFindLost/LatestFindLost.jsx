@@ -56,19 +56,15 @@ const LatestFindLost = () => {
                 <div className="p-4">
                   <h3 className="text-2xl font-bold">{item.title}</h3>
                   <p className="text-sm mt-2 flex items-center gap-2">
-                    <FaTags className="text-white" />{" "}
-                    <strong className="mr-1">Type:</strong>
-                    {item.type}
+                    <FaTags className="text-white" /> {item.type.charAt(0).toUpperCase() + item.type.slice(1)}
                   </p>
                   <p className="text-sm flex items-center gap-2">
-                    <FaMapMarkerAlt className="text-white" />
-                    <strong className="mr-1">Location:</strong> {item.location}
+                    <FaMapMarkerAlt className="text-white" /> {item.location}
                   </p>
                   <p className="text-sm flex items-center gap-2">
-                    <FaCalendarAlt className="text-white" />{" "}
-                    <strong className="mr-1">Date:</strong>
-                    {new Date(item.date).toLocaleDateString("en-US")}
+                    <FaCalendarAlt className="text-white" /> {new Date(item.date).toLocaleDateString("en-US")}
                   </p>
+                  <p className="text-sm mt-2">{item.description}</p>
                   <div className="mt-6 text-center flex justify-center">
                     <button
                       onClick={() => navigate(`/items/${item._id}`)}

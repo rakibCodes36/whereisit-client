@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import sliderImg1 from "../../../assets/slider-1.jpg";
-import sliderImg2 from "../../../assets/slider-2.jpg";
-import sliderImg3 from "../../../assets/slider-3.jpg";
-import sliderImg4 from "../../../assets/slider-4.jpg";
+import sliderImg2 from "../../../assets/slider-2.jpeg";
+import sliderImg3 from "../../../assets/slider-3.jpeg";
+import sliderImg4 from "../../../assets/slider-4.jpeg";
 
 const Slider = () => {
   const [activeSlide, setActiveSlide] = useState(1);
@@ -62,7 +62,7 @@ const Slider = () => {
 
   return (
     <div className="relative flex justify-center items-center overflow-hidden ">
-      <div className="relative w-full max-w-7xl h-[545px]">
+      <div className="relative w-full max-w-7xl h-[600px]">
         <AnimatePresence>
           {slides
             .filter((slide) => slide.id === activeSlide)

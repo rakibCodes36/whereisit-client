@@ -13,8 +13,9 @@ const Home = () => {
       </Helmet>
       <Slider></Slider>
       <LatestFindLost></LatestFindLost>
-      <ItemCounts></ItemCounts>
       <HowItWorks></HowItWorks>
+      <ItemCounts></ItemCounts>
+
       <Testimonials></Testimonials>
     </div>
   );
