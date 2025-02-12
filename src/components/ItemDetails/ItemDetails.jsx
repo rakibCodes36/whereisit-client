@@ -108,7 +108,7 @@ const ItemDetails = () => {
 
   if (!item) {
     return (
-      <div className="text-center mt-10 text-gray-500">Item not found</div>
+      <div className="text-center mt-10 text-red-500 min-h-[60vh] text-3xl flex justify-center items-center">Item not found</div>
     );
   }
 
@@ -161,7 +161,7 @@ const ItemDetails = () => {
           {item.status !== "recovered" ? (
             <button
               onClick={handleRecoverItem}
-              className="w-full py-3 btn bg-gradient-to-r from-green-400 to-blue-500 text-white text-xl font-bold hover:from-green-500 hover:to-blue-600 transition duration-300 rounded-lg "
+              className="w-full py-3 btn bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition duration-300 text-xl  rounded-lg "
             >
               {item.type === "lost" ? "Found This!" : "This is Mine!"}
             </button>
@@ -216,13 +216,13 @@ const ItemDetails = () => {
               <div className="modal-action">
                 <button
                   onClick={() => setIsModalOpen(false)}
-                  className="btn btn-secondary"
+                  className="btn btn-error"
                 >
                   Cancel
                 </button>
                 <button
                   onClick={handleSubmitRecovery}
-                  className="btn btn-primary"
+                  className="btn bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold hover:from-blue-600 hover:to-cyan-600 transition duration-300"
                 >
                   Submit
                 </button>
