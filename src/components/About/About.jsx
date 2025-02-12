@@ -2,8 +2,8 @@
 
 const About = () => {
   return (
-    <section className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
-      <h1 className="text-3xl font-bold text-center text-gray-800 mb-4">
+    <section className="max-w-4xl mx-auto px-6 bg-white shadow-lg rounded-lg mb-14">
+      <h1 className="text-3xl font-bold text-center text-gray-800 mb-10">
         About WhereIsIt
       </h1>
       <p className="text-gray-600 text-lg mb-4">

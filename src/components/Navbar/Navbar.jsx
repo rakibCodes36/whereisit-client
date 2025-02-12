@@ -71,7 +71,7 @@ const Navbar = () => {
                   <img
                     src={user.photoURL}
                     alt="User Avatar"
-                    className="w-8 h-8 rounded-full border-2 border-primary"
+                    className="w-8 h-8 rounded-full border-2 border-slate-200"
                     data-tooltip-id="user-tooltip"
                     data-tooltip-content={user.displayName}
                   />

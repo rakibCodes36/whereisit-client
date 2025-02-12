@@ -28,7 +28,8 @@ const Testimonials = () => {
   ];
 
   return (
-    <div className="container mx-auto p-8 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 rounded-lg shadow-xl">
+    <div className=" px-8 py-14 bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 rounded-lg shadow-xl">
+      <div className="max-w-7xl mx-auto">
       <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-10">
         What Our Users Say
       </h2>
@@ -57,7 +58,7 @@ const Testimonials = () => {
           </div>
         ))}
       </div>
-    </div>
+    </div></div>
   );
 };
 

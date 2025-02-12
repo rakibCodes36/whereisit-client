@@ -36,11 +36,11 @@ const HowItWorks = () => {
   
 
   return (
-    <section className="py-16 bg-gradient-to-b from-blue-100 via-purple-100 to-pink-100 mb-10">
-      <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-12">
+    <section className="py-14 bg-gradient-to-b from-blue-100 via-purple-100 to-pink-100 mb-10">
+      <h2 className="text-4xl font-extrabold text-center text-gray-800 mb-10">
         How It Works
       </h2>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
         {steps.map((step, index) => (
           <motion.div
             key={index}

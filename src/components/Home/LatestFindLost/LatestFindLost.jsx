@@ -29,7 +29,7 @@ const LatestFindLost = () => {
   }, []);
 
   return (
-    <div className="max-w-7xl mx-auto my-10 px-4">
+    <div className="max-w-7xl mx-auto mb-14 px-4">
       <h2 className="text-3xl font-bold text-center mb-10 mt-14 text-gray-800">
         Latest Found and Lost Items
       </h2>
@@ -78,7 +78,7 @@ const LatestFindLost = () => {
             ))}
           </div>
 
-          <div className="text-center mt-8 flex justify-center">
+          <div className="text-center mt-10 flex justify-center">
             <button
               onClick={() => navigate("/all-items")}
               className="px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold rounded flex items-center justify-center gap-2 hover:from-blue-600 hover:to-cyan-600 transition duration-300"
